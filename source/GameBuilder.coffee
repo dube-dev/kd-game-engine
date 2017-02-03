@@ -7,7 +7,7 @@ module.exports = class
 	build_client: (canvas, _window) ->
 		context =
 			env: Game.Context.ENV_CLIENT
-		game = Game.make_new_instance context
+		game = new Game.Instance context
 		# Add engines here based on @context
 		game.add_engine new Game.Engines.Physics
 		game.add_engine new Game.Engines.Render canvas, _window
@@ -36,9 +36,9 @@ module.exports = class
 
 				# Install dependancy
 				dmodule = modules[dmod]
-				game.install_module dmodule
+				game.install_module dmod, dmodule
 				installed.push dmod
 
 			# Install module
-			game.install_module module
+			game.install_module mod, module
 			installed.push mod

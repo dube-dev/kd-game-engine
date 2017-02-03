@@ -24,7 +24,7 @@ module.exports = class extends FactoryTemplate
 			entity = {}
 
 			entity.model = factory.make_model(options, @game, id)
-			if game.get_context().env == Context.ENV_CLIENT:
+			if @game.get_context().env == Context.ENV_CLIENT
 				entity.view = factory.make_view(options, @game, entity.model)
 
 			return entity

@@ -15,7 +15,7 @@ module.exports = class extends Emitter
 		@entities.push entity
 		@emit('stage.add_entity', entity)
 
-		type = entity.get_type()
+		type = entity.model.get_type()
 		@emit('stage.add_entity.'+type, entity)
 
 	# @param [Object] entity  any subclass of BaseEntity
@@ -45,4 +45,4 @@ module.exports = class extends Emitter
 		@emit('stage.before_update')
 		# Update all entities in stage
 		for entity in @entities
-			entity.update(deltaT)
+			entity.model.update(deltaT)

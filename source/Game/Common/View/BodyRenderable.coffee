@@ -1,7 +1,7 @@
 # This class renders a Matter-JS body.
 module.exports = class
 	constructor: (@body, @fill=null) ->
-	do_render: (context) ->
+	render: (context) ->
 		context.beginPath()
 
 		vertices = @body.vertices;

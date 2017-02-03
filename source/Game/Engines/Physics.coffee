@@ -49,15 +49,17 @@ module.exports = class
 
 		# Stage Events
 		@stage.on 'stage.add_entity', (entity) ->
-			body = entity.get_body()
+			model = entity.model
+			body = model.get_body()
 			# Remember which entity this belongs to
 			# (for collision events)
-			self.bodyToEntityMap[body.id] = entity
+			self.bodyToEntityMap[body.id] = model
 			# Add body to the Matter-JS world
 			self.add_body body
 
 		@stage.on 'stage.rem_entity', (entity) ->
-			self.rem_body entity.get_body()
+			model = entity.model
+			self.rem_body model.get_body()
 
 	add_body: (body) ->
 		Matter.World.add @engine.world, [body]

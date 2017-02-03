@@ -26,8 +26,11 @@ module.exports = class
 			stage: @stage
 		engine.activate engine_i
 
-	install_module: (module) ->
-		modules.append module
+	install_module: (name, module) ->
+		@modules[name] = module
 		module.install @
 
 	get_context: () -> @context
+
+	add_entity_factory: (type, factory) ->
+		@entities.add_factory(type, factory)

@@ -30,11 +30,11 @@ module.exports = class
 		self = @
 
 		@stage.on 'stage.add_entity', (entity) ->
-			renderable = entity.get_renderable()
+			renderable = entity.view
 			self._add_renderable renderable
 
 		@stage.on 'stage.rem_entity', (entity) ->
-			renderable = entity.get_renderable()
+			renderable = entity.view
 			self._rem_renderable renderable
 
 	_add_renderable: (renderable) ->

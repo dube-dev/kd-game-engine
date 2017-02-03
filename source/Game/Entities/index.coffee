@@ -1,4 +1,4 @@
 module.exports =
-	EntityFactory: require "./EntityFactory"
-	BaseEntitySF: require "./BaseEntitySF"
-	BaseEntity: require "./BaseEntity"
+	MainEntityFactory: require "./MainEntityFactory"
+	SubEntityFactory: require "./SubEntityFactory"
+	EntityModel: require "./EntityModel"
