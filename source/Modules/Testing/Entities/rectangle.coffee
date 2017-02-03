@@ -7,7 +7,7 @@ class Factory extends API.Interfaces.EntityFactory
 
 	make_model: (options, game, id) ->
 		body = @_make_body options
-		return new Model 'matter_rectangle', body, id
+		return new Model 'rectangle', body, id
 
 	make_view: (options, game, model) ->
 		body = model.get_body()

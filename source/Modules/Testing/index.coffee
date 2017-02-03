@@ -7,6 +7,6 @@ class ThisModule extends API.Interfaces.Module
 		# Add entity subfactories
 		for type of Entities
 			factory = new Entities[type]
-			game.add_entity_factory type, factory
+			game.add_entity_factory 'Testing.'+type, factory
 
 module.exports = new ThisModule
