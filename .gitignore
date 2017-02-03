@@ -1,0 +1,12 @@
+# External libraries
+node_modules/ 
+
+# Generated sources
+processed/
+
+# build.sh script garbage
+source/garbage_js.js
+source/garbage_json.json
+
+# Miscellaneous garbage
+messy_code/
