@@ -4,6 +4,7 @@ Entities = require "./Entities"
 module.exports =
 	Context: require "./Context"
 	Engines: require "./Engines"
+	Controllers: require "./Controllers"
 	Instance: require "./Instance"
 	API:
 		Interfaces:

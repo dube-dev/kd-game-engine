@@ -13,6 +13,8 @@ Lib = deps.Lib # For serializing body
 module.exports = class extends deps.Emitter
 
 	constructor: (@type, @body, @uuid) ->
+		@init()
+	init: () ->
 
 	get_type: () -> @type
 	get_body: () -> @body
@@ -47,6 +49,8 @@ module.exports = class extends deps.Emitter
 
 	# @param deltaT time difference
 	update: (deltaT) ->
+
+	perform_action: (name, params=null) ->
 
 	set_id: (@uuid) ->
 	get_id: () -> @uuid
