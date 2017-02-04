@@ -3,6 +3,10 @@ KControls = deps.Lib.KeyboardControls
 
 # This class listens to control events and converts them
 # into actions that an entity model will understand.
+#
+# This allows an entity model to accept simple events like
+# "start walking left" and "stop walking" without any worry
+# of how the user is pressing the keys.
 module.exports = class
 	constructor: (@controls, @creature) ->
 
