@@ -1,7 +1,6 @@
 #!/bin/sh
 
 # This file bundles the client-side JavaScript using browserify.
-# It's called "bun" because that's faster to type than "bundle".
 
 # WARNING: Depending on the implementation of 'find' in your
 # distribution, this script may fail.
