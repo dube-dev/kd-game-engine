@@ -2,7 +2,7 @@
 node_modules/ 
 
 # Generated sources
-processed/
+build/
 
 # build.sh script garbage
 source/garbage_js.js

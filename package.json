@@ -2,11 +2,14 @@
   "name": "kd-game-engine",
   "version": "0.0.0",
   "description": "JavaScript game engine using the matter-js physics engine",
-  "main": "processed/index.js",
+  "main": "build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "./build.sh"
+    "build": "./build.sh"
   },
+  "files": [
+    "build"
+  ],
   "author": "Eric Dubé (KernelDeimos)",
   "license": "MIT",
   "dependencies": {
