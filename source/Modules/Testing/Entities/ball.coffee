@@ -19,6 +19,10 @@ class Model extends API.Interfaces.EntityModel
 		if action == 'walk.halt'
 			@walking = 0
 
+		if action == 'walk.jump'
+			v = @body.velocity
+			Matter.Body.setVelocity(@body, {x:v.x,y:-10})
+
 	update: (deltaT) ->
 		console.log @walking
 		

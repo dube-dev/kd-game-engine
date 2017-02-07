@@ -13,7 +13,8 @@
   "author": "Eric Dubé (KernelDeimos)",
   "license": "MIT",
   "dependencies": {
-    "matter-js": "^0.11.1",
-    "node-uuid": "^1.4.7"
+    "matter-js": "github:liabru/matter-js",
+    "node-uuid": "^1.4.7",
+    "poly-decomp": "^0.2.1"
   }
 }
