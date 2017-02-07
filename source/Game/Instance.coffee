@@ -7,7 +7,7 @@ Parts =
 	Entities: require "./Entities"
 	Base: require "./Base"
 
-module.exports = class
+module.exports = class extends Emitter
 	constructor: (@context) ->
 		@events = new Emitter # Events emitted by engines or modules
 
@@ -34,3 +34,13 @@ module.exports = class
 
 	add_entity_factory: (type, factory) ->
 		@entities.add_factory(type, factory)
+
+	add_entity: (type, options) ->
+		# Create entity
+		entity = @entities.make type, options
+		# Add entity to the stage
+		@stage.add_entity entity
+		# Return the entity
+		return entity
+
+	start: () -> @emit 'init'
