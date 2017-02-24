@@ -1,5 +1,5 @@
 # External libraries
-node_modules/ 
+node_modules/
 
 # Generated sources
 build/
@@ -10,3 +10,5 @@ source/garbage_json.json
 
 # Miscellaneous garbage
 messy_code/
+
+npm-debug\.log
