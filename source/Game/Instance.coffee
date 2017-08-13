@@ -13,9 +13,9 @@ module.exports = class extends Emitter
 
 		@stage = new Parts.Stage
 
-		@entities = new Parts.Entities.MainEntityFactory @
-		@actions  = new Parts.Base.FactoryTemplate @
-		@triggers = new Parts.Base.FactoryTemplate @
+		@entities = new Parts.Entities.MainEntityFactory @context
+		@actions  = new Parts.Base.FactoryTemplate @context
+		@triggers = new Parts.Base.FactoryTemplate @context
 
 		@modules = {}
 

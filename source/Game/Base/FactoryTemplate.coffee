@@ -2,7 +2,7 @@
 module.exports = class
 
 	# @param [Object] api  API available to sub-factories
-	constructor: (@game) ->
+	constructor: (@context) ->
 		@available = {}
 
 	# Add a sub-factory to be called in order to create an object
@@ -21,7 +21,7 @@ module.exports = class
 	# @param [Object] options  options to pass to sub-factory
 	make: (type, options={}) ->
 		if type of @available
-			return @available[type].make(options, @game)
+			return @available[type].make(options, @context)
 		else
 			throw new Error "Type '"+type+"' requested but not" +
 				" provided by this factory."
